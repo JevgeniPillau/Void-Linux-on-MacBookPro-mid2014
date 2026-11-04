@@ -29,3 +29,10 @@ Not tested:
             2.  Mtp file transfer to smartphone
 
 Not working: You tell me...
+
+
+Build tested on MacBookPro mid 2014 and IMac8.1.
+Due to GitHub's 2GB file size limit, the ISO is split.
+To join them back on Linux/macOS, download both files and run:
+
+'cat void-linux-for-macbookpro-mid2014-v6.iso.part* > void-linux-for-macbookpro-mid2014-v6.iso'
