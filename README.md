@@ -1,5 +1,7 @@
 Script build_live_iso_date_Vx.sh made to create bootable ISO from my home system which runs Niri window manager + Noctalia shell on Void Linux on my Macbook Pro mid 2014 as daily driver.
 
+Run script inside /void-mklive/ directory. Void-mklive is standard void linux tool for building iso images, for details use Void linux Handbook.
+
 Image void-linux-for-macbookpro-mid2014-Vx.iso is result of the script ready to be written to USB drive.
 Command to write image to usb drive (change X in /dev/sdX to approriate usb drive letter):
 sudo dd bs=4M if=/home/jp/snapshots/void-live-perfect.iso of=/dev/sdX conv=fsync status=progress
