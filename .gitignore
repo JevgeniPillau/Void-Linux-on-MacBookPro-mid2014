@@ -1,2 +1,3 @@
-*.iso.part*
+*.iso.part00
+*.iso.part01
 *.iso
