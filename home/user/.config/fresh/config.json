@@ -1,0 +1,10 @@
+{
+  "theme": "builtin://gruvbox",
+  "plugins": {
+    "orchestrator": {
+      "settings": {
+        "autoOpenDock": "never"
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "sway/language",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "custom/cliphist",
+        "custom/notification",
+        "custom/power"
+    ],
+
+    // Часы и дата
+    "clock": {
+        "format": " {:%H:%M   %d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    // Раскладка клавиатуры
+    "sway/language": {
+        "format": "  {}",
+        "min-length": 5,
+        "tooltip": false
+    },
+
+    // Загрузка CPU
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+
+    // Загрузка RAM
+    "memory": {
+        "format": " {}%"
+    },
+
+    // Температура CPU
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+    // Батарея с отображением времени разряда/заряда
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% ({time})",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    },
+
+    // Звук (управление колесиком мыши)
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Сеть (Wi-Fi и Ethernet)
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-disconnected": " Disconnected",
+        "tooltip-format-wifi": "Сигнал: {signaldBm}dBm",
+        "on-click": "nm-connection-editor"
+    },
+
+    // Bluetooth
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": " off",
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{device_alias}",
+        "tooltip-format-connected": " {device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "blueman-manager"
+    },
+
+    // Буфер обмена (зависит от cliphist и rofi/wofi)
+    "custom/cliphist": {
+        "format": "📋",
+        "on-click": "cliphist list | wofi --dmenu | cliphist decode | wl-copy",
+        "tooltip": false
+    },
+
+    // Уведомления (интеграция с mako или swaync)
+    "custom/notification": {
+        "tooltip": false,
+        "format": "🔔",
+        "on-click": "makoctl dismiss"
+    },
+
+    // Меню питания (Выключение, Рестарт, Выход, Сон)
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "swaynag -t warning -m 'Управление питанием:' -b 'Выключение' 'shutdown now' -b 'Перезагрузка' 'reboot' -b 'Выйти' 'swaymsg exit' -b 'Сон' 'systemctl suspend'",
+        "tooltip": false
+    }
+}

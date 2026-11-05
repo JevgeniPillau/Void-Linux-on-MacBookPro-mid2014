@@ -1,0 +1,59 @@
+@define-color bg_hard #1d2021;
+@define-color fg #ebdbb2;
+@define-color gray #928374;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d6a;
+@define-color orange #d65d0e;
+
+#* {
+#    font-family: "Noto Sans", "Font Awesome 6 Free", sans-serif;
+#    font-size: 13px;
+#    font-weight: bold;
+#    border: none;
+#    border-radius: 0;
+#}
+
+* {
+    /* Подключаем Martian Mono Nerd Font как основной и единственный шрифт */
+    font-family: "MartianMono Nerd Font", "MartianMono NF", sans-serif;
+    font-size: 12px; /* Уменьшено до 12px, так как моноширинные шрифты крупнее обычных */
+    font-weight: 500; /* Medium начертание отлично смотрится в этом шрифте */
+    border: none;
+    border-radius: 0;
+}
+
+
+window#waybar {
+    background-color: @bg_hard;
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-bottom: 2px solid @bg;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: @gray;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.active {
+    color: @orange;
+    border-bottom: 2px solid @orange;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#clock, #cpu, #memory, #temperature, #custom-clipboard, #battery, #wireplumber, #bluetooth, #network, #tray, #custom-power {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    background-color: @bg;
+}

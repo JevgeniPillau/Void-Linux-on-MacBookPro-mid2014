@@ -1,0 +1,50 @@
+window {
+    margin: 0px;
+    border: 2px solid #7aa2f7;
+    border-radius: 10px;
+    background-color: rgba(26, 27, 38, 0.85);
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+#input {
+    margin: 10px;
+    border: 1px solid #414868;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #16161e;
+    color: #c0caf5;
+}
+
+#inner-box {
+    margin: 10px;
+}
+
+#outer-box {
+    margin: 0px;
+}
+
+#scroll {
+    margin: 5px;
+}
+
+#text {
+    margin: 5px;
+    color: #a9b1d6;
+}
+
+/* Элемент списка (строка хоткея) */
+#entry {
+    padding: 5px;
+}
+
+/* Выделенная строка */
+#entry:selected {
+    background-color: #33467c;
+    border-radius: 5px;
+}
+
+#text:selected {
+    color: #f7768e;
+    font-weight: bold;
+}

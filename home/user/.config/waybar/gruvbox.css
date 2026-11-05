@@ -1,0 +1,160 @@
+/* Цветовая палитра Gruvbox */
+@define-color bg #282828;
+@define-color bg_dark #1d2021;
+@define-color fg #ebdbb2;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d6a;
+@define-color gray #a89984;
+
+#* {
+#    font-family: "Font Awesome 6 Free", "JetBrains Mono", "Noto Sans", sans-serif;
+#    font-size: 13px;
+#    font-weight: bold;
+#    border: none;
+#    border-radius: 0;
+#}
+
+
+* {
+    /* Подключаем Martian Mono Nerd Font как основной и единственный шрифт */
+    font-family: "MartianMono Nerd Font", "MartianMono NF", sans-serif;
+    font-size: 12px; /* Уменьшено до 12px, так как моноширинные шрифты крупнее обычных */
+    font-weight: 500; /* Medium начертание отлично смотрится в этом шрифте */
+    border: none;
+    border-radius: 0;
+}
+
+
+window#waybar {
+    background-color: @bg_dark;
+    color: @fg;
+    border-bottom: 2px solid @bg;
+}
+
+/* Стили для рабочих столов Sway */
+#workspaces button {
+    padding: 0 10px;
+    background-color: transparent;
+    color: @gray;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    background-color: @bg;
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @fg;
+}
+
+/* Базовый стиль для всех модулей справа и в центре */
+#clock,
+#language,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#custom-cliphist,
+#custom-notification,
+#custom-power {
+    padding: 0 12px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    background-color: @bg;
+}
+
+/* Кастомные цветовые акценты по группам */
+#clock {
+    color: @aqua;
+    background-color: @bg_dark;
+}
+
+#language {
+    color: @blue;
+}
+
+#cpu {
+    color: @green;
+}
+
+#memory {
+    color: @purple;
+}
+
+#temperature {
+    color: @yellow;
+}
+
+#temperature.critical {
+    background-color: @red;
+    color: @fg;
+}
+
+#battery {
+    color: @aqua;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @fg;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio {
+    color: @blue;
+}
+
+#pulseaudio.muted {
+    color: @gray;
+}
+
+#network {
+    color: @green;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#bluetooth {
+    color: @blue;
+}
+
+#custom-cliphist {
+    color: @yellow;
+}
+
+#custom-notification {
+    color: @purple;
+}
+
+#custom-power {
+    color: @red;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+@keyframes blink {
+    to {
+        background-color: @bg;
+        color: @red;
+    }
+}
