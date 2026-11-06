@@ -71,6 +71,6 @@ sudo modprobe wl
 
 💻 Hardware Compatibility
 
-This build has been successfully compiled and tested on:
-• MacBookPro (Mid 2014)
-• iMac 8.1
+This build has been successfully compiled and tested on:\
+• MacBookPro (Mid 2014)\
+• iMac 8.1\
