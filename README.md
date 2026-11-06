@@ -45,17 +45,17 @@ sudo modprobe wl
 
 🟢 What's Working
 
-• Fast Boot: Boot process is highly optimized, dropping you straight into TTY1.
-• Core Core Services: Critical daemons are pre-configured, up, and running:
-	• dbus, seatd, elogind, udevd, acpid
-	• dhcpcd, NetworkManager, wpa_supplicant
-	• bluetoothd, sshd, agetty
-• Hardware Support: Perfect out-of-the-box support for the MacBook Pro Trackpad and Audio.
-• Automated Wi-Fi Drivers: The script automatically detects the Wi-Fi hardware and installs the correct drivers (successfully tested on both a MacBook Pro Mid 2014 and an iMac 8.1).
-• Kernel Module Integration: Embedded host-tested wl Broadcom kernel module.
-• Custom Russian Layout: Features a tailored Russian keyboard layout with modified hotkeys.
-• Pre-installed Software: Includes popular essential packages like kitty, firefox, vlc, audacious, fuzzle, and fuzzypkg.
-• Void Installer: Equipped with the native void-installer alongside all necessary dependencies (xmirror, gptfdisk, grub, util-linux) for full disk installation.
+• Fast Boot: Boot process is highly optimized, dropping you straight into TTY1.\
+• Core Core Services: Critical daemons are pre-configured, up, and running:\
+	• dbus, seatd, elogind, udevd, acpid\
+	• dhcpcd, NetworkManager, wpa_supplicant\
+	• bluetoothd, sshd, agetty\
+• Hardware Support: Perfect out-of-the-box support for the MacBook Pro Trackpad and Audio.\
+• Automated Wi-Fi Drivers: The script automatically detects the Wi-Fi hardware and installs the correct drivers (successfully tested on both a MacBook Pro Mid 2014 and an iMac 8.1).\
+• Kernel Module Integration: Embedded host-tested wl Broadcom kernel module.\
+• Custom Russian Layout: Features a tailored Russian keyboard layout with modified hotkeys.\
+• Pre-installed Software: Includes popular essential packages like kitty, firefox, vlc, audacious, fuzzle, and fuzzypkg.\
+• Void Installer: Equipped with the native void-installer alongside all necessary dependencies (xmirror, gptfdisk, grub, util-linux) for full disk installation.\
 
 🟡 Not Tested / Unknown
 
