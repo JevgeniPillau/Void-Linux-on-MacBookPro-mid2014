@@ -19,7 +19,7 @@ The output will be a flash-ready image named void-linux-for-macbookpro-mid2014-V
 
 💾 How to Flash the ISO
 
-Due to GitHub's 2GB file size limit, the release ISO is split into multiple parts. To join the files back into a single flashable image on Linux or macOS, download all parts to the same folder and run:\
+Due to GitHub's 2GB file size limit, the release ISO is split into multiple parts. To join the files back into a single flashable image on Linux or macOS, [download all parts](https://github.com/JevgeniPillau/Void-Linux-on-MacBookPro-mid2014/releases/tag/v6.0) to the same folder and run:\
 
 
 `cat void-linux-for-macbookpro-mid2014-v6.iso.part* > void-linux-for-macbookpro-mid2014-v6.iso`
