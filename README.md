@@ -21,33 +21,34 @@ The output will be a flash-ready image named void-linux-for-macbookpro-mid2014-V
 
 Due to GitHub's 2GB file size limit, the release ISO is split into multiple parts. To join the files back into a single flashable image on Linux or macOS, download all parts to the same folder and run:
 bash
-cat void-linux-for-macbookpro-mid2014-v6.iso.part* > void-linux-for-macbookpro-mid2014-v6.iso
+`cat void-linux-for-macbookpro-mid2014-v6.iso.part* > void-linux-for-macbookpro-mid2014-v6.iso`
 Используйте код с осторожностью.
 Once you have the complete .iso file, use the following command to write it to your USB drive (replace X in /dev/sdX with your actual USB device letter):
 bash
-sudo dd bs=4M if=void-linux-for-macbookpro-mid2014-v6.iso of=/dev/sdX conv=fsync status=progress
+`sudo dd bs=4M if=void-linux-for-macbookpro-mid2014-v6.iso of=/dev/sdX conv=fsync status=progress`
 
 🚀 Booting & Getting Started
 
 1. The ISO boots quickly and smoothly straight into TTY1.
 2. Log in using the standard Void Linux credentials (e.g., anon or root).
-3. To launch the graphical interface (Niri + Noctalia), type the following command and hit Enter:bash
-dbus-run-session niri
+3. To launch the graphical interface (Niri + Noctalia), type the following command and hit Enter:
+`dbus-run-session niri`
 
 
 [!IMPORTANT]
 ⚠️ Wi-Fi Troubleshooting:
 While the script embeds the working wl kernel module from the host system, if Wi-Fi does not work immediately after booting the live environment, open a terminal and run:
-bash
+```
 sudo depmod -a
 sudo modprobe wl
 
+```
 
 🟢 What's Working
 
 • Fast Boot: Boot process is highly optimized, dropping you straight into TTY1.\
-• Core Core Services: Critical daemons are pre-configured, up, and running:\
- dbus, seatd, elogind, udevd, acpid, dhcpcd, NetworkManager, wpa_supplicant, bluetoothd, sshd, agetty
+• Core Services: Critical daemons are pre-configured, up, and running:\
+ dbus, seatd, elogind, udevd, acpid, dhcpcd, NetworkManager, wpa_supplicant, bluetoothd, sshd, agetty...\
 • Hardware Support: Perfect out-of-the-box support for the MacBook Pro Trackpad and Audio.\
 • Automated Wi-Fi Drivers: The script automatically detects the Wi-Fi hardware and installs the correct drivers (successfully tested on both a MacBook Pro Mid 2014 and an iMac 8.1).\
 • Kernel Module Integration: Embedded host-tested wl Broadcom kernel module.\
