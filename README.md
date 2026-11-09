@@ -41,7 +41,7 @@ Once you have the complete .iso file, use the following command to write it to y
 
 [!IMPORTANT]
 ⚠️ Wi-Fi Troubleshooting:
-While the script embeds the working wl kernel module from the host system, if Wi-Fi does not work immediately after booting the live environment, open a terminal and run:\
+While the script embeds the working wl kernel module from the host system, if Wi-Fi does not work immediately after booting the live environment, open a terminal and run:
 ```
 sudo depmod -a
 sudo modprobe wl
