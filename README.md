@@ -33,7 +33,7 @@ Once you have the complete .iso file, use the following command to write it to y
 
 1. The ISO boots quickly and smoothly straight into TTY1.
 2. Log in using the standard Void Linux credentials (e.g., anon or root).
-3. To launch the graphical interface (Niri + Noctalia), type the following command and hit Enter:\
+3. To launch the graphical interface (Niri + Noctalia), type the following command and hit Enter:
 
 
 `dbus-run-session niri`
