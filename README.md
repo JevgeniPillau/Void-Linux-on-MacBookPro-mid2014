@@ -41,7 +41,7 @@ sudo dd bs=4M if=/home/jp/snapshots/void-live-umno-v1.iso of=/dev/sdX conv=fsync
    ```
 4. **Key Shortcuts:**
    * **`Mod+L`**: Lock screen via Noctalia (`noctalia msg session lock`).
-   * **`Mod+Alt+H`**: Open interactive hotkey cheatsheet.
+   * **`Mod+Alt+U`**: Open interactive hotkey cheatsheet.
 
 > **[!IMPORTANT] Wi-Fi Troubleshooting**
 > While the build script embeds the working `wl` kernel module from the host system and includes `b43-fwcutter`, if Wi-Fi does not initialize immediately after booting the live environment, open a terminal and run:
