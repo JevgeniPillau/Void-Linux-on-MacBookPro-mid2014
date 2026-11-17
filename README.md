@@ -15,7 +15,7 @@ The `build-live-iso-umno-v1.sh` script automates the creation of this custom boo
    ```bash
    sudo ./build-live-iso-umno-v1.sh
    ```
-   *(Note: `void-mklive` is the official Void Linux toolchain for building ISO images. Refer to the [Void Linux Handbook](https://voidlinux.org) for additional details).*
+   *(Note: `void-mklive` is the official Void Linux toolchain for building ISO images. Refer to the [Void Linux Handbook](https://docs.voidlinux.org) for additional details).*
 3. The output will be a single, flash-ready image named **`void-live-umno-v1.iso`** (`1.91 GiB` / `1,955 MiB`).
 
 ---
