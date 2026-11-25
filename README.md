@@ -18,28 +18,7 @@ Custom, lightweight, security-hardened **Void Linux** live & installable ISO ima
 * **Custom CLI & TUI Tooling:** 
 
   * Includes kitty, fuzzel, btop, fuzzypkg, xmirror, hblock, fcron, and an interactive post-install setup tool for superfile, fresh, and cliamp, plus a custom void-installer.
-
-#### 📂 Repository Structure
-
-ASCII
-
-void-mklive/
-├── build-live-iso-umno-v1.0.3.sh   # Unified build script (overlay prep + ISO generation)
-├── mklive.sh                       # Patched Void mklive script (-comp xz -Xbcj x86 -b 1M)
-├── installer.sh                    # Custom system installer (injected as /usr/bin/void-installer)
-├── my-overlay/                     # Persistent rootfs overlay template
-│   ├── etc/
-│   │   ├── skel/
-│   │   │   ├── .bash_profile       # TTY1 boot chain (wifi-connect -> post-install -> Umbriel)
-│   │   │   ├── .bashrc             # Gruvbox prompt, cursor theme, and editor defaults
-│   │   │   └── .config/scripts/
-│   │   │       ├── wifi-connect.sh # Interactive TUI Wi-Fi scanner & connector
-│   │   │       └── post-install.sh # Optional TUI utility installer & Umbriel launcher
-│   │   └── xbps.d/
-│   │       └── 10-universal.conf   # UniversalRepository configuration
-│   └── usr/local/share/icons/      # System-wide Gruvbox icon & cursor themes
-└── included_files/                 # Auto-generated temporary staging directory (ignored/rebuilt)
-
+    
 
 #### 🚀 Boot & First-Login Workflow
 
